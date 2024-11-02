@@ -1,1 +1,1 @@
-here is the result of randomfile1 and randomfile2 contents in random file 1., contents in random file 2.
+This is Awesome : contents in random file 1. contents in random file 2.
