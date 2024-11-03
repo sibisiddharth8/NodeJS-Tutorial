@@ -1,8 +1,5 @@
-const http = require('http');
+const { writeFileSync } = require('fs');
 
-const server = http.createServer((req, res) =>{
-    res.write('Welcome to My Home Page');
-    res.end();
-})
-
-server.listen(5000);
+for (let i=0; i<10000; i++){
+    writeFileSync('./contents/big.txt', `hello world ${i}\n`, {flag: 'a'});
+}
