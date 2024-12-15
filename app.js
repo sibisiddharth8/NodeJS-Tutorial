@@ -1,5 +1,11 @@
-const { writeFileSync } = require('fs');
+const { createReadStream } = require('fs');
 
-for (let i=0; i<10000; i++){
-    writeFileSync('./contents/big.txt', `hello world ${i}\n`, {flag: 'a'});
-}
+const stream = createReadStream('.../contents/big.txt');
+
+stream.on('data', (result) => {
+    console.log(result);
+});
+
+stream.on('error', (err) => {
+    console.log(err);
+});
